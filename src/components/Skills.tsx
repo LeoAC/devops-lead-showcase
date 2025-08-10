@@ -4,34 +4,34 @@ import { Cloud, Server, Code, Shield, GitBranch, Monitor } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Cloud Platforms",
-    icon: Cloud,
-    skills: ["Microsoft Azure", "AWS", "Google Cloud", "Kubernetes", "Docker", "Terraform"]
-  },
-  {
-    title: "Infrastructure",
-    icon: Server,
-    skills: ["Linux Administration", "Network Security", "Load Balancing", "CDN", "Monitoring", "Backup & Recovery"]
-  },
-  {
-    title: "DevOps Tools",
+    title: "Herramientas DevOps",
     icon: GitBranch,
     skills: ["Jenkins", "GitLab CI/CD", "Azure DevOps", "Ansible", "Puppet", "Chef"]
   },
   {
-    title: "Programming",
+    title: "Programación",
     icon: Code,
-    skills: ["Python", "Bash/Shell", "PowerShell", "Go", "YAML", "JSON"]
+    skills: [ "SQL", "PL/SQL", "Python", "Bash/Shell", "Python", "PowerShell", "VB6"]
   },
   {
-    title: "Security",
+    title: "Seguridad en Jenkins",
     icon: Shield,
-    skills: ["Identity Management", "RBAC", "SSL/TLS", "Vulnerability Assessment", "Compliance", "Zero Trust"]
+    skills: ["Sonar", "Checkmarx", "Sonartype", "SonarIQ"]
   },
   {
-    title: "Monitoring",
-    icon: Monitor,
-    skills: ["Prometheus", "Grafana", "ELK Stack", "Splunk", "New Relic", "Azure Monitor"]
+    title: "Infraestructura",
+    icon: Server,
+    skills: ["Linux", "Monitoreo", "Respaldo y Recuperación"]
+  },
+   {
+    title: "Analisis técnico",
+    icon: Server,
+    skills: ["Migración", "Documentación","? ? ? ? ?"]
+  },
+     {
+    title: "Analisis técnico ? ? ? ? ?",
+    icon: Server,
+    skills: ["Migración", "Documentación"]
   }
 ];
 
@@ -41,11 +41,11 @@ const Skills = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            <span className="hero-text">Technical Expertise</span>
+            <span className="hero-text">Experiencia Técnica</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive skill set spanning cloud infrastructure, automation, 
-            and modern DevOps practices
+            Conjunto de habilidades integral que abarca infraestructura en la nube, automatización
+            y prácticas modernas de DevOps
           </p>
         </div>
 
@@ -53,8 +53,8 @@ const Skills = () => {
           {skillCategories.map((category, index) => {
             const IconComponent = category.icon;
             return (
-              <Card 
-                key={category.title} 
+              <Card
+                key={category.title}
                 className="card-elegant animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -67,9 +67,9 @@ const Skills = () => {
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
-                      <Badge 
-                        key={skill} 
-                        variant="secondary" 
+                      <Badge
+                        key={skill}
+                        variant="secondary"
                         className="tech-badge text-sm"
                       >
                         {skill}
